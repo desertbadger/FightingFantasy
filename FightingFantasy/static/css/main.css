@@ -73,10 +73,10 @@ body {
     border-bottom: 20px solid #668466;
 }
 
-.footer-container,
+/* .footer-container,
 .main aside {
-    border-top: 20px solid #668466;
-}
+    border-top: 20px solid #003300;
+}*/
 
 .header-container,
 .footer-container,
@@ -157,7 +157,9 @@ a {
     color: white;
 }
 
-
+body {
+    background-color: #668466;
+}
 
 
 
