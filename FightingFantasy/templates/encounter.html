@@ -5,6 +5,47 @@ Encounter -- Time to Fight!
 {% endblock %}
 
 {% block content %}
+ <section>
+     <h1>Enter Stats</h1>
+     <form action="" method="post">
+         {{form.hidden_tag()}}
+         <table>
+             <tr>
+                 <td><h2>Hero:</h2></td>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td><h2>Enemy:</h2></td>
+             </tr>
+             <tr>
+                 <td>Stamina:</td>
+                 <td>{{form.hstam(size = 25)}}</td>
+                 <td></td>
+                 <td></td>
+                 <td>Stamina:</td>
+                 <td>{{form.estam(size = 25)}}</td>
+             </tr>
+             <tr>
+                 <td>Skill:</td>
+                 <td>{{form.hskill(size = 25)}}</td>
+                 <td></td>
+                 <td></td>
+                 <td>Skill:</td>
+                 <td>{{form.eskill(size = 25)}}</td>
+             </tr>
+             <tr>
+                 <td>luck:</td>
+                 <td>{{form.hluck(size = 25)}}</td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td></td>
+                 <td></td>
+                 <td><button type="submit">Fight!</button></td>
+             </tr>
+         </table>
+     </form>
+ </section>
 {% endblock%}
 
 {% block sidebar %}
