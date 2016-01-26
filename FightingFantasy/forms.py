@@ -5,11 +5,11 @@ from wtforms.validators import DataRequired
 
 
 class HeroStats(Form):
-    hstam = StringField('hstam', validators=[DataRequired()])
-    hskill = StringField('hskill', validators=[DataRequired()])
-    hluck = StringField('hluck', validators=[DataRequired()])
-    estam = StringField('estam', validators=[DataRequired()])
-    eskill = StringField('eskill', validators=[DataRequired()])
+    hstam = StringField('Stamina:', validators=[DataRequired()])
+    hskill = StringField('Skill:', validators=[DataRequired()])
+    hluck = StringField('Luck:', validators=[DataRequired()])
+    estam = StringField('Stamina:', validators=[DataRequired()])
+    eskill = StringField('Skill:', validators=[DataRequired()])
 
 
 class LoginForm(Form):

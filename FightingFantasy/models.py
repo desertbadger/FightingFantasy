@@ -1,5 +1,5 @@
 from datetime import datetime
-from views import db
+from FightingFantasy import db
 from flask_login import UserMixin
 
 

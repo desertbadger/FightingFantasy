@@ -1,6 +1,5 @@
 from flask import render_template, redirect, url_for, flash, request
 from forms import HeroStats, LoginForm
-from flask_sqlalchemy import SQLAlchemy
 from flask_login import login_required, login_user
 from models import User, Hero, Enemy
 from FightingFantasy import app, db, login_manager
@@ -42,7 +41,12 @@ def encounter():
         hluck = int(form.hluck.data)
         estam = int(form.estam.data)
         eskill = int(form.eskill.data)
-        # stats =
+        print load_user
+        hstats = Hero(hstam=hstam, hskill=hskill, hluck=hluck, user_id=load_user)
+        estats = Enemy(estam=estam, eskill=eskill, user_id=load_user)
+        db.session.add(hstats)
+        db.session.add(estats)
+        db.session.commit()
 
         return redirect(url_for('fight'))
     return render_template('encounter.html', form=form)
@@ -74,6 +78,3 @@ def page_not_found(e):
 @app.errorhandler(500)
 def server_error(e):
     return render_template('500.html'), 500
-
-if __name__ == '__main__':
-    app.run()
